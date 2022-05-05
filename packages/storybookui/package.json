@@ -7,7 +7,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "jest",
-    "build": "build-storybook -o ../../apps/docs",
+    "build": "concurrently \"rollup -c \" \"build-storybook -o ../../apps/docs \"",
     "dev": "concurrently \"rollup -c -w\" \"start-storybook -p 6006\""
   },
   "keywords": [],
