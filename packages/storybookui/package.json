@@ -7,8 +7,10 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "jest",
+    "chromatic-build": "build-storybook",
     "build": "concurrently \"rollup -c \" \"build-storybook -o ../../apps/docs \"",
-    "dev": "concurrently \"rollup -c -w\" \"start-storybook -p 6006\""
+    "dev": "concurrently \"rollup -c -w\" \"start-storybook -p 6006\"",
+    "chromatic": "npx chromatic --project-token=49d9965d16bc --build-script-name=chromatic-build"
   },
   "keywords": [],
   "author": "",
@@ -35,6 +37,7 @@
     "@types/react": "^18.0.8",
     "autoprefixer": "^10.4.6",
     "babel-loader": "^8.2.5",
+    "chromatic": "^6.5.4",
     "concurrently": "^7.1.0",
     "jest": "^28.0.3",
     "jest-environment-jsdom": "^28.0.2",
